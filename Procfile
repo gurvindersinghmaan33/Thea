@@ -1,0 +1,1 @@
+web: gunicorn thehindu.wsgi:application --log-file -
