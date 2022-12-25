@@ -141,10 +141,10 @@ def flag_check(collection, driver, flag_process):
 def specific_audio_fetch(request):
     # colab code here
     options = webdriver.ChromeOptions() 
-    # options.add_argument("--no-sandbox")
-    # options.add_argument("--headless")
-    # options.add_argument("--disable-gpu")
-    # options.add_argument('--disable-dev-shm-usage')
+    options.add_argument("--no-sandbox")
+    options.add_argument("--headless")
+    options.add_argument("--disable-gpu")
+    options.add_argument('--disable-dev-shm-usage')
     driver = uc.Chrome(options=options)
     driver.get('https://accounts.google.com/ServiceLogin')
     driver.maximize_window()
