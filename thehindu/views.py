@@ -57,8 +57,9 @@ def specific_editorial_fetch(request):
     options.add_argument("--disable-gpu")
     options.add_argument('--disable-dev-shm-usage')
     options.add_experimental_option("prefs", prefs)
-    driver = webdriver.Chrome(options=options)
-    # service=Service(ChromeDriverManager().install()), 
+#     driver = webdriver.Chrome(options=options)
+#     # service=Service(ChromeDriverManager().install()), 
+    driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
 
     driver.get("https://www.thehindu.com/opinion/editorial")
     driver.maximize_window()
